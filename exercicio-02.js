@@ -1,23 +1,25 @@
 const prompt = require('prompt-sync')();
 
-console.log("PROVÃO BLUEEDTECH - CLASSE 16 - MÓDULO 1 - EXERCÍCIO 01");
+console.log("PROVÃO BLUEEDTECH - CLASSE 16 - MÓDULO 1 - EXERCÍCIO 02");
 console.log("aluno: Robison Pereira Machado");
 
-console.log("\n\nDIGITE A HORA INICIAL: ")
-const horaInicial = +prompt();
+console.log("\n\nDIGITE SUA IDADE EM DIAS: ")
+let diasDeIdade = +prompt();
+diasDeIdade = diasDeIdade;
 
-console.log("\n\nDIGITE A HORA FINAL: ")
-const horaFinal = +prompt();
+let anos = Number.parseInt(diasDeIdade/365);
+let meses = 0;
+let dias = 0;
+let resto = diasDeIdade - (anos*365)
 
-let duracao;
+if(resto != 0){
+    meses = Number.parseInt(resto/30);
+    resto = resto - (meses*30);
+}
 
-if(horaInicial === horaFinal){
-    duracao = 24;
-}else if(horaFinal > horaInicial){
-    duracao = horaFinal - horaInicial;
-}else if(horaFinal < horaInicial){
-    duracao = 24 + (horaFinal - horaInicial);
+if(resto != 0){
+    dias = resto;
 }
 
 
-console.log(`\n\nO JOGO DUROU ${duracao} HORA(S)`);
+console.log(`\n\n${anos} ano(s)\n${meses} mes(es)\n${dias} dia(s)\n`);
