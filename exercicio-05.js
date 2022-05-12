@@ -23,13 +23,12 @@ for (let index = numeroInformado-1; index > 1; index--) {
     if(numeroInformado%index === 0) {
         contaDivisoes++;
     }
-    
+
     if(contaDivisoes >= 3) break;
 }
 
 if(contaDivisoes === 2 ) primo=true;
 
-console.log(`\n\nDIVISÕES: ${contaDivisoes} \n`);
 
 if(primo){
     console.log(`\n\n${numeroInformado} eh primo\n`);
