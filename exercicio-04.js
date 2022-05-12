@@ -8,6 +8,10 @@ console.log("\n\nDigite quantos casos de teste você gostaria de realizar: ")
 const totalCasosDeTeste = Number.parseInt(prompt());
 
 for (let index = 0; index < totalCasosDeTeste; index++) {
+    console.log("\n=====================================================");
+    console.log(`\t\tCASO DE TESTE ${index+1}`);
+    console.log("=====================================================");
+
     console.log("\n\nInforme a população da cidade A: ")
     const populacaoCidadeA = Number.parseInt(prompt());
 
@@ -35,9 +39,10 @@ for (let index = 0; index < totalCasosDeTeste; index++) {
     }
 
     if(totalAnos <=100){
-        console.log(`\n\n${totalAnos} anos.`);
+        console.log(`\n\n${totalAnos} anos.\n\n`);
     }else if(totalAnos > 100){
-        console.log(`\n\nMais de 1 século`);
+        console.log(`\n\nMais de 1 século\n\n`);
     }
+
     
 }
