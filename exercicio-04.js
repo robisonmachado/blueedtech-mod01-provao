@@ -39,9 +39,9 @@ for (let index = 0; index < totalCasosDeTeste; index++) {
     }
 
     if(totalAnos <=100){
-        console.log(`\n\n${totalAnos} anos.\n\n`);
+        console.log(`\n\nRESULTADO\n${totalAnos} anos.\n\n`);
     }else if(totalAnos > 100){
-        console.log(`\n\nMais de 1 século\n\n`);
+        console.log(`\n\nRESULTADO\nMais de 1 século\n\n`);
     }
 
     
