@@ -15,8 +15,29 @@ for (let index = 0; index < totalCasosDeTeste; index++) {
     const populacaoCidadeB = Number.parseInt(prompt());
 
     console.log("\n\nInforme o percentual de crescimento anual da população da cidade A: ")
-    const percentualCrescimentoCidadeA = Number.parseFloat(prompt());
+    const percentualCrescimentoCidadeA = Number.parseFloat(prompt()).toFixed(1);
 
     console.log("\n\nInforme o percentual de crescimento anual da população da cidade B: ")
-    const percentualCrescimentoCidadeB = Number.parseFloat(prompt());
+    const percentualCrescimentoCidadeB = Number.parseFloat(prompt()).toFixed(1);
+
+    let totalAnos = 0;
+    let maximoAnos = 100;
+    
+    let novaPopulacaoCidadeA = populacaoCidadeA;
+    let novaPopulacaoCidadeB = populacaoCidadeB;
+
+    for (let index = 0; index < maximoAnos; index++) {
+        novaPopulacaoCidadeA = novaPopulacaoCidadeA + Number.parseInt((novaPopulacaoCidadeA * (percentualCrescimentoCidadeA/100) ));
+        novaPopulacaoCidadeB = novaPopulacaoCidadeB + Number.parseInt((novaPopulacaoCidadeB * (percentualCrescimentoCidadeB/100) ));
+        totalAnos++;
+
+        if(novaPopulacaoCidadeA > novaPopulacaoCidadeB) break;
+    }
+
+    if(totalAnos <=100){
+        console.log(`\n\n${totalAnos} anos.`);
+    }else if(totalAnos > 100){
+        console.log(`\n\nMais de 1 século`);
+    }
+    
 }
