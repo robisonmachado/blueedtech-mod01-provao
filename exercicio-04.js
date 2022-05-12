@@ -26,6 +26,7 @@ for (let index = 0; index < totalCasosDeTeste; index++) {
 
     let totalAnos = 0;
     let maximoAnos = 100;
+    let excedidoMaximoAnos = false;
     
     let novaPopulacaoCidadeA = populacaoCidadeA;
     let novaPopulacaoCidadeB = populacaoCidadeB;
@@ -36,11 +37,12 @@ for (let index = 0; index < totalCasosDeTeste; index++) {
         totalAnos++;
 
         if(novaPopulacaoCidadeA > novaPopulacaoCidadeB) break;
+        if(totalAnos == 100 && novaPopulacaoCidadeA < novaPopulacaoCidadeB) excedidoMaximoAnos = true;
     }
 
-    if(totalAnos <=100){
+    if(!excedidoMaximoAnos){
         console.log(`\n\nRESULTADO\n${totalAnos} anos.\n\n`);
-    }else if(totalAnos > 100){
+    }else{
         console.log(`\n\nRESULTADO\nMais de 1 século\n\n`);
     }
 
